@@ -1,13 +1,9 @@
-JAVAD CRAFT - Website
-- index.html: page content, including 100 Minecraft facts and a search box
-- style.css: responsive design
-- images/: optimized banner and profile images
 
-Preview:
-1) Extract the ZIP.
-2) Keep index.html, style.css, and images folder together.
-3) Open index.html in Chrome or Edge.
-
-Publish:
-Upload all files and the images folder to the root of your GitHub Pages repository.
-The Aparat link is already included. Replace other placeholder # links when ready.
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://javadrezai321123-svg.github.io/Javad-ceraft/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>
