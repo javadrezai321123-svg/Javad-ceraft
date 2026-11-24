@@ -93,9 +93,9 @@
 
     .tag {
       display: inline-block;
-      background: #103b59;
-      color: #8be7ff;
-      border: 1px solid #167aa8;
+      background: rgba(8, 42, 70, .92);
+      color: #9cecff;
+      border: 1px solid #168fc4;
       border-radius: 30px;
       padding: 5px 16px;
     }
@@ -130,14 +130,14 @@
       border-radius: 12px;
       font-weight: 800;
       background: var(--green);
-      color: #071b11;
+      color: #04182a;
       transition: .2s;
     }
 
     .btn:hover { transform: translateY(-3px); }
 
     .btn.secondary {
-      background: #183653;
+      background: #173b5b;
       color: white;
     }
 
@@ -155,7 +155,7 @@
 
     .about-box, .fact, .social {
       background: var(--panel);
-      border: 1px solid #1b5278;
+      border: 1px solid #205b83;
       border-radius: 16px;
       padding: 20px;
     }
@@ -166,10 +166,11 @@
       width: 190px; height: 190px; flex: 0 0 190px;
       object-fit: cover; border-radius: 20px;
       border: 3px solid #19c7ff;
-      box-shadow: 0 0 28px rgba(25,199,255,.22);
+      box-shadow: 0 0 28px rgba(25,199,255,.28);
     }
     .about-text { min-width: 0; }
-\n    .facts-grid {
+
+    .facts-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 13px;
@@ -247,7 +248,9 @@
         grid-template-columns: 1fr;
       }
 
-      section { padding: 38px 0; }\n      .about-content { flex-direction: column; text-align: center; }\n      .profile-photo { width: 160px; height: 160px; flex-basis: 160px; }
+      section { padding: 38px 0; }
+      .about-content { flex-direction: column; text-align: center; }
+      .profile-photo { width: 160px; height: 160px; flex-basis: 160px; }
     }
   </style>
 </head>
@@ -288,7 +291,9 @@
       <h2 class="section-title">👋 درباره جواد کرفت</h2>
       <p class="section-sub">با سازنده این دنیای کوچک آشنا شو!</p>
 
-      <div class="about-box about-content">\n        <img class="profile-photo" src="images/javad-profile.webp" alt="تصویر پروفایل جواد کرفت">\n        <div class="about-text">
+      <div class="about-box about-content">
+        <img class="profile-photo" src="images/javad-profile.webp" alt="تصویر پروفایل جواد کرفت">
+        <div class="about-text">
         <h3>سلام! من جوادم 💙</h3>
         <p>
           به سایت Javad Craft خوش اومدی!
