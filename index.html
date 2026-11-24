@@ -1,113 +1,487 @@
+
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Javad Craft؛ سایت رسمی جواد کرفت با ۱۰۰ دانستنی ماینکرفت، معرفی جواد، ویدیوها و ماجراجویی‌های ماینکرفتی.">
+
+  <title>جواد کرفت | ۱۰۰ دانستنی ماینکرفت و دنیای Minecraft</title>
+
+  <meta name="description" content="سایت رسمی جواد کرفت؛ شامل ۱۰۰ دانستنی ماینکرفت، معرفی Minecraft، ماجراجویی، ساخت‌وساز و ویدیوهای جواد کرفت به زبان فارسی.">
   <meta name="robots" content="index, follow">
   <meta name="author" content="Javad Craft">
+  <meta name="theme-color" content="#101827">
+
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Javad Craft | دنیای جواد کرفت">
-  <meta property="og:description" content="۱۰۰ دانستنی ماینکرفت، ساخت‌وسازها و ماجراجویی‌های جواد کرفت.">
-  <meta property="og:image" content="images/javad-craft-banner.webp">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="theme-color" content="#050b18">
-  <title>Javad Craft | دنیای جواد کرفت</title>
+  <meta property="og:title" content="جواد کرفت | دنیای ماینکرفت">
+  <meta property="og:description" content="۱۰۰ دانستنی ماینکرفت و ماجراجویی‌های جواد کرفت">
+  <meta property="og:url" content="https://javadrezai321123-svg.github.io/Javad-ceraft/">
+
+  <link rel="canonical" href="https://javadrezai321123-svg.github.io/Javad-ceraft/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+
+  <style>
+    :root {
+      --bg: #101827;
+      --panel: #192538;
+      --green: #35d07f;
+      --text: #f4f7fb;
+      --muted: #a9b7c9;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Vazirmatn, Tahoma, sans-serif;
+      line-height: 1.9;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .wrap {
+      width: min(1100px, 92%);
+      margin: auto;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 20px 0;
+    }
+
+    .logo {
+      font-size: 1.4rem;
+      font-weight: 900;
+    }
+
+    .logo span { color: var(--green); }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      color: var(--muted);
+    }
+
+    nav a:hover { color: var(--green); }
+
+    .hero {
+      padding: 85px 15px;
+      text-align: center;
+      background:
+        radial-gradient(ellipse at center, #234b42 0%, transparent 65%);
+    }
+
+    .tag {
+      display: inline-block;
+      background: #183c32;
+      color: #70f5ac;
+      border: 1px solid #28764f;
+      border-radius: 30px;
+      padding: 5px 16px;
+    }
+
+    h1 {
+      font-size: clamp(2.3rem, 7vw, 4.5rem);
+      line-height: 1.3;
+      margin: 20px 0;
+      font-weight: 900;
+    }
+
+    h1 span { color: var(--green); }
+
+    .hero p {
+      color: var(--muted);
+      max-width: 700px;
+      margin: auto;
+      font-size: 1.1rem;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 11px 22px;
+      border-radius: 12px;
+      font-weight: 800;
+      background: var(--green);
+      color: #071b11;
+      transition: .2s;
+    }
+
+    .btn:hover { transform: translateY(-3px); }
+
+    .btn.secondary {
+      background: #26364c;
+      color: white;
+    }
+
+    section { padding: 55px 0; }
+
+    .section-title {
+      font-size: 2rem;
+      margin: 0 0 8px;
+    }
+
+    .section-sub {
+      color: var(--muted);
+      margin-bottom: 25px;
+    }
+
+    .about-box, .fact, .social {
+      background: var(--panel);
+      border: 1px solid #2c3e55;
+      border-radius: 16px;
+      padding: 20px;
+    }
+
+    .facts-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 13px;
+    }
+
+    .fact {
+      display: flex;
+      gap: 13px;
+      align-items: flex-start;
+    }
+
+    .fact-number {
+      color: var(--green);
+      font-size: 1.2rem;
+      font-weight: 900;
+      min-width: 30px;
+    }
+
+    .fact p { margin: 0; }
+
+    .search {
+      width: 100%;
+      padding: 14px 17px;
+      border: 1px solid #42536b;
+      border-radius: 12px;
+      background: #192538;
+      color: white;
+      font: inherit;
+      margin: 15px 0 22px;
+      outline: none;
+    }
+
+    .search:focus { border-color: var(--green); }
+
+    .socials {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+
+    .social {
+      display: block;
+      transition: .2s;
+    }
+
+    .social:hover {
+      border-color: var(--green);
+      transform: translateY(-3px);
+    }
+
+    .social strong {
+      display: block;
+      font-size: 1.1rem;
+    }
+
+    .social span { color: var(--muted); }
+
+    footer {
+      text-align: center;
+      padding: 30px 15px;
+      color: var(--muted);
+      border-top: 1px solid #26364c;
+    }
+
+    @media(max-width: 700px) {
+      header {
+        flex-direction: column;
+      }
+
+      nav { justify-content: center; }
+
+      .hero { padding: 55px 10px; }
+
+      .facts-grid, .socials {
+        grid-template-columns: 1fr;
+      }
+
+      section { padding: 38px 0; }
+    }
+  </style>
 </head>
+
 <body>
-  <header class="topbar">
-    <a class="brand" href="#home" aria-label="Javad Craft خانه">
-      <span class="brand-mark">JC</span><span>JAVAD <b>CRAFT</b></span>
-    </a>
-    <nav class="nav" aria-label="منوی اصلی">
-      <a href="#home">خانه</a><a href="#about">درباره من</a><a href="#facts">دانستنی‌ها</a><a href="#links">لینک‌ها</a>
-    </nav>
-    <a class="nav-cta" href="#facts">ورود به ماجراجویی <span>↗</span></a>
-  </header>
 
-  <main>
-    <section class="hero" id="home">
-      <img class="hero-image" src="images/javad-craft-banner.webp" alt="بنر اختصاصی Javad Craft با دنیای ماینکرفت">
-      <div class="hero-shade"></div>
-      <div class="hero-content">
-        <div class="eyebrow"><span class="pulse"></span> دنیای اختصاصی جواد کرفت</div>
-        <h1>به دنیای<br><span>JAVAD CRAFT</span><br>خوش اومدی!</h1>
-        <p>اینجا دنیای ساخت‌وسازهای خفن، دانستنی‌های ماینکرفت و ماجراجویی‌های بی‌پایانه. آماده‌ای؟</p>
-        <div class="hero-actions">
-          <a class="button primary" href="#facts">کشف دانستنی‌ها <span>←</span></a>
-          <a class="button ghost" href="#about">درباره جواد</a>
-        </div>
-        <div class="hero-meta"><span>⛏️ MINECRAFT</span><i></i><span>💎 BUILD & EXPLORE</span><i></i><span>⚡ JAVAD CRAFT</span></div>
-      </div>
-      <div class="hero-corner">OFFICIAL FAN SITE</div>
-    </section>
+<header class="wrap">
+  <a class="logo" href="#">JAVAD <span>CRAFT</span> ⛏️</a>
+  <nav>
+    <a href="#about">درباره من</a>
+    <a href="#facts">۱۰۰ دانستنی</a>
+    <a href="#social">شبکه‌های اجتماعی</a>
+  </nav>
+</header>
 
-    <section class="section about" id="about">
-      <div class="section-heading"><span class="section-kicker">PLAYER PROFILE</span><h2>بازیکن پشت این <span>ماجراجویی</span></h2></div>
-      <div class="about-card">
-        <div class="profile-wrap"><img src="images/javad-profile.webp" alt="تصویر اختصاصی پروفایل Javad Craft" loading="lazy"></div>
-        <div class="about-copy">
-          <span class="profile-label">THE CREATOR</span>
-          <h3>من جوادم؛ صاحب Javad Craft</h3>
-          <p>به دنیای من خوش اومدی! من عاشق ماینکرفت، دنیای کامپیوتر و ساختن چیزهای جدیدم. اینجا قراره دانستنی‌ها، ایده‌ها و ماجراجویی‌هام رو باهات به اشتراک بذارم.</p>
-          <div class="mini-tags"><span>⛏️ Minecraft Player</span><span>💻 Tech Lover</span><span>👑 Javad Craft</span></div>
-        </div>
-        <div class="watermark">JC</div>
-      </div>
-    </section>
+<main>
 
-<section class="section facts" id="facts">
-      <div class="section-heading row-heading">
-        <div><span class="section-kicker">MINECRAFT KNOWLEDGE</span><h2>۱۰۰ دانستنی <span>ماینکرفت</span></h2></div>
-        <span class="count-badge">100 FACTS</span>
-      </div>
-      <div class="fact-tools">
-        <label class="search-label" for="factSearch">🔎 جست‌وجو در دانستنی‌ها</label>
-        <input id="factSearch" class="fact-search" type="search" placeholder="مثلاً کریپر، الیترا، ردستون..." autocomplete="off">
-        <span id="factCount" class="fact-count">نمایش ۱۰۰ دانستنی</span>
-      </div>
-      <div class="fact-grid" id="factGrid">
-        <article class="fact-card" data-search="موجودات پاندای قهوه‌ای پاندای قهوه‌ای یکی از رنگ‌های کمیاب پانداهاست و با ژنتیک پانداها ارتباط دارد."><span class="fact-icon">🐼</span><span class="fact-number">001 / موجودات</span><h3>پاندای قهوه‌ای</h3><p>پاندای قهوه‌ای یکی از رنگ‌های کمیاب پانداهاست و با ژنتیک پانداها ارتباط دارد.</p></article><article class="fact-card" data-search="موجودات کریپر از گربه می‌ترسد کریپرها و فانتوم‌ها از گربه‌ها و اوسلوت‌ها فاصله می‌گیرند."><span class="fact-icon">🐈</span><span class="fact-number">002 / موجودات</span><h3>کریپر از گربه می‌ترسد</h3><p>کریپرها و فانتوم‌ها از گربه‌ها و اوسلوت‌ها فاصله می‌گیرند.</p></article><article class="fact-card" data-search="افسون‌ها تریدنت و صاعقه افسون Channeling هنگام طوفان و برخورد تریدنت به هدف، صاعقه ایجاد می‌کند."><span class="fact-icon">⚡</span><span class="fact-number">003 / افسون‌ها</span><h3>تریدنت و صاعقه</h3><p>افسون Channeling هنگام طوفان و برخورد تریدنت به هدف، صاعقه ایجاد می‌کند.</p></article><article class="fact-card" data-search="ابزارها قطب‌نمای معمولی قطب‌نمای معمولی به نقطه اسپاون جهان اشاره می‌کند، نه لزوماً محل تخت."><span class="fact-icon">🧭</span><span class="fact-number">004 / ابزارها</span><h3>قطب‌نمای معمولی</h3><p>قطب‌نمای معمولی به نقطه اسپاون جهان اشاره می‌کند، نه لزوماً محل تخت.</p></article><article class="fact-card" data-search="موجودات کلاه‌خود لاک‌پشتی با ۵ قطعه Scute می‌توان کلاه‌خود لاک‌پشتی ساخت."><span class="fact-icon">🐢</span><span class="fact-number">005 / موجودات</span><h3>کلاه‌خود لاک‌پشتی</h3><p>با ۵ قطعه Scute می‌توان کلاه‌خود لاک‌پشتی ساخت.</p></article><article class="fact-card" data-search="ابعاد آب در ندر آبِ قرارگرفته در دنیای ندر به‌طور معمول فوراً تبخیر می‌شود."><span class="fact-icon">🔥</span><span class="fact-number">006 / ابعاد</span><h3>آب در ندر</h3><p>آبِ قرارگرفته در دنیای ندر به‌طور معمول فوراً تبخیر می‌شود.</p></article><article class="fact-card" data-search="موجودات فانتوم‌ها و خواب اگر چند شب در بازی نخوابی، فانتوم‌ها ممکن است در آسمان ظاهر شوند."><span class="fact-icon">💤</span><span class="fact-number">007 / موجودات</span><h3>فانتوم‌ها و خواب</h3><p>اگر چند شب در بازی نخوابی، فانتوم‌ها ممکن است در آسمان ظاهر شوند.</p></article><article class="fact-card" data-search="موجودات زامبی‌ها و روستایی‌ها بعضی زامبی‌ها می‌توانند به روستایی‌ها حمله کنند و آن‌ها را به زامبی روستایی تبدیل کنند."><span class="fact-icon">🧟</span><span class="fact-number">008 / موجودات</span><h3>زامبی‌ها و روستایی‌ها</h3><p>بعضی زامبی‌ها می‌توانند به روستایی‌ها حمله کنند و آن‌ها را به زامبی روستایی تبدیل کنند.</p></article><article class="fact-card" data-search="بلوک‌ها سنگ بستر سنگ بستر در حالت بقا با ابزارهای معمولی قابل شکستن نیست."><span class="fact-icon">🪨</span><span class="fact-number">009 / بلوک‌ها</span><h3>سنگ بستر</h3><p>سنگ بستر در حالت بقا با ابزارهای معمولی قابل شکستن نیست.</p></article><article class="fact-card" data-search="سنگ معدن الماس الماس از منابع ارزشمند برای ساخت ابزار و زره است."><span class="fact-icon">💎</span><span class="fact-number">010 / سنگ معدن</span><h3>الماس</h3><p>الماس از منابع ارزشمند برای ساخت ابزار و زره است.</p></article><article class="fact-card" data-search="موجودات اسلایم‌ها اسلایم‌ها هنگام شکست به اسلایم‌های کوچک‌تر تقسیم می‌شوند؛ مگر کوچک‌ترین اندازه."><span class="fact-icon">🟩</span><span class="fact-number">011 / موجودات</span><h3>اسلایم‌ها</h3><p>اسلایم‌ها هنگام شکست به اسلایم‌های کوچک‌تر تقسیم می‌شوند؛ مگر کوچک‌ترین اندازه.</p></article><article class="fact-card" data-search="موجودات زنبورها زنبورها پس از نیش زدن، در نهایت می‌میرند."><span class="fact-icon">🐝</span><span class="fact-number">012 / موجودات</span><h3>زنبورها</h3><p>زنبورها پس از نیش زدن، در نهایت می‌میرند.</p></article><article class="fact-card" data-search="غذا عسل بطری عسل می‌تواند اثر مسمومیت را پاک کند."><span class="fact-icon">🍯</span><span class="fact-number">013 / غذا</span><h3>عسل</h3><p>بطری عسل می‌تواند اثر مسمومیت را پاک کند.</p></article><article class="fact-card" data-search="بلوک‌ها یخ آبی قایق روی یخ آبی بسیار سریع حرکت می‌کند."><span class="fact-icon">🧊</span><span class="fact-number">014 / بلوک‌ها</span><h3>یخ آبی</h3><p>قایق روی یخ آبی بسیار سریع حرکت می‌کند.</p></article><article class="fact-card" data-search="نورپردازی شمع‌ها می‌توان تا چهار شمع هم‌رنگ را روی یک بلوک قرار داد."><span class="fact-icon">🕯️</span><span class="fact-number">015 / نورپردازی</span><h3>شمع‌ها</h3><p>می‌توان تا چهار شمع هم‌رنگ را روی یک بلوک قرار داد.</p></article><article class="fact-card" data-search="موجودات کدو روی سر اندرمن‌ها وقتی بازیکن کدوتنبل حکاکی‌شده روی سر دارد، با نگاه مستقیم تحریک نمی‌شوند."><span class="fact-icon">🎃</span><span class="fact-number">016 / موجودات</span><h3>کدو روی سر</h3><p>اندرمن‌ها وقتی بازیکن کدوتنبل حکاکی‌شده روی سر دارد، با نگاه مستقیم تحریک نمی‌شوند.</p></article><article class="fact-card" data-search="ابعاد تخت در ندر اگر در ندر روی تخت بخوابی، تخت منفجر می‌شود."><span class="fact-icon">🛏️</span><span class="fact-number">017 / ابعاد</span><h3>تخت در ندر</h3><p>اگر در ندر روی تخت بخوابی، تخت منفجر می‌شود.</p></article><article class="fact-card" data-search="ابعاد تخت در اند تخت در بُعد اند هم هنگام تلاش برای خوابیدن منفجر می‌شود."><span class="fact-icon">🛏️</span><span class="fact-number">018 / ابعاد</span><h3>تخت در اند</h3><p>تخت در بُعد اند هم هنگام تلاش برای خوابیدن منفجر می‌شود.</p></article><article class="fact-card" data-search="ساخت‌وساز درگاه ندر درگاه ندر با قاب ابسیدین و روشن کردن داخل آن ساخته می‌شود."><span class="fact-icon">🧱</span><span class="fact-number">019 / ساخت‌وساز</span><h3>درگاه ندر</h3><p>درگاه ندر با قاب ابسیدین و روشن کردن داخل آن ساخته می‌شود.</p></article><article class="fact-card" data-search="ابعاد درگاه اند برای فعال‌کردن درگاه اند باید چشم اندر را در جای خالی قاب‌ها قرار داد."><span class="fact-icon">🟪</span><span class="fact-number">020 / ابعاد</span><h3>درگاه اند</h3><p>برای فعال‌کردن درگاه اند باید چشم اندر را در جای خالی قاب‌ها قرار داد.</p></article><article class="fact-card" data-search="موجودات اژدهای اندر با شکست دادن اژدهای اندر، راه دسترسی به درگاه خروج باز می‌شود."><span class="fact-icon">🐉</span><span class="fact-number">021 / موجودات</span><h3>اژدهای اندر</h3><p>با شکست دادن اژدهای اندر، راه دسترسی به درگاه خروج باز می‌شود.</p></article><article class="fact-card" data-search="ابزارها الیترا الیترا امکان سر خوردن و پرواز با کمک آتش‌بازی را فراهم می‌کند."><span class="fact-icon">🪽</span><span class="fact-number">022 / ابزارها</span><h3>الیترا</h3><p>الیترا امکان سر خوردن و پرواز با کمک آتش‌بازی را فراهم می‌کند.</p></article><article class="fact-card" data-search="ابزارها آتش‌بازی و الیترا استفاده از راکت آتش‌بازی هنگام پرواز با الیترا سرعت را افزایش می‌دهد."><span class="fact-icon">🚀</span><span class="fact-number">023 / ابزارها</span><h3>آتش‌بازی و الیترا</h3><p>استفاده از راکت آتش‌بازی هنگام پرواز با الیترا سرعت را افزایش می‌دهد.</p></article><article class="fact-card" data-search="معجون‌ها معجون دید در شب دید در شب باعث می‌شود محیط‌های تاریک روشن‌تر دیده شوند."><span class="fact-icon">🧪</span><span class="fact-number">024 / معجون‌ها</span><h3>معجون دید در شب</h3><p>دید در شب باعث می‌شود محیط‌های تاریک روشن‌تر دیده شوند.</p></article><article class="fact-card" data-search="معجون‌ها معجون نامرئی‌شدن نامرئی‌شدن زره و وسایلی را که دستت گرفته‌ای پنهان نمی‌کند."><span class="fact-icon">🫥</span><span class="fact-number">025 / معجون‌ها</span><h3>معجون نامرئی‌شدن</h3><p>نامرئی‌شدن زره و وسایلی را که دستت گرفته‌ای پنهان نمی‌کند.</p></article><article class="fact-card" data-search="بلوک‌ها اسفنج اسفنج آب اطراف خود را جذب می‌کند."><span class="fact-icon">🧱</span><span class="fact-number">026 / بلوک‌ها</span><h3>اسفنج</h3><p>اسفنج آب اطراف خود را جذب می‌کند.</p></article><article class="fact-card" data-search="بلوک‌ها اسفنج خیس اسفنج خیس را می‌توان با خشک‌کردن دوباره به اسفنج معمولی تبدیل کرد."><span class="fact-icon">🌊</span><span class="fact-number">027 / بلوک‌ها</span><h3>اسفنج خیس</h3><p>اسفنج خیس را می‌توان با خشک‌کردن دوباره به اسفنج معمولی تبدیل کرد.</p></article><article class="fact-card" data-search="گیاهان بامبو بامبو می‌تواند خیلی سریع رشد کند و برای داربست هم کاربرد دارد."><span class="fact-icon">🪴</span><span class="fact-number">028 / گیاهان</span><h3>بامبو</h3><p>بامبو می‌تواند خیلی سریع رشد کند و برای داربست هم کاربرد دارد.</p></article><article class="fact-card" data-search="ساخت‌وساز داربست داربست با بامبو و نخ ساخته می‌شود و برای ساخت‌وساز بلند مفید است."><span class="fact-icon">🎋</span><span class="fact-number">029 / ساخت‌وساز</span><h3>داربست</h3><p>داربست با بامبو و نخ ساخته می‌شود و برای ساخت‌وساز بلند مفید است.</p></article><article class="fact-card" data-search="موجودات روباه‌ها روباه‌ها ممکن است بعضی آیتم‌ها را در دهان خود نگه دارند."><span class="fact-icon">🦊</span><span class="fact-number">030 / موجودات</span><h3>روباه‌ها</h3><p>روباه‌ها ممکن است بعضی آیتم‌ها را در دهان خود نگه دارند.</p></article><article class="fact-card" data-search="موجودات گرگ‌ها با استخوان می‌توان گرگ را اهلی کرد."><span class="fact-icon">🐺</span><span class="fact-number">031 / موجودات</span><h3>گرگ‌ها</h3><p>با استخوان می‌توان گرگ را اهلی کرد.</p></article><article class="fact-card" data-search="موجودات گربه‌های اهلی گربه‌های اهلی ممکن است هنگام خواب بازیکن هدیه‌ای کنار او بگذارند."><span class="fact-icon">🐱</span><span class="fact-number">032 / موجودات</span><h3>گربه‌های اهلی</h3><p>گربه‌های اهلی ممکن است هنگام خواب بازیکن هدیه‌ای کنار او بگذارند.</p></article><article class="fact-card" data-search="موجودات دلفین‌ها غذا دادن به دلفین می‌تواند او را به سمت سازه‌ها یا گنج‌های زیر آب راهنمایی کند."><span class="fact-icon">🐬</span><span class="fact-number">033 / موجودات</span><h3>دلفین‌ها</h3><p>غذا دادن به دلفین می‌تواند او را به سمت سازه‌ها یا گنج‌های زیر آب راهنمایی کند.</p></article><article class="fact-card" data-search="موجودات ماهی بادکنکی ماهی بادکنکی در تماس نزدیک می‌تواند به بازیکن اثر سمی بدهد."><span class="fact-icon">🐟</span><span class="fact-number">034 / موجودات</span><h3>ماهی بادکنکی</h3><p>ماهی بادکنکی در تماس نزدیک می‌تواند به بازیکن اثر سمی بدهد.</p></article><article class="fact-card" data-search="موجودات گلو اسکوئید گلو اسکوئید هنگام آسیب دیدن جوهر درخشان آزاد می‌کند."><span class="fact-icon">🦑</span><span class="fact-number">035 / موجودات</span><h3>گلو اسکوئید</h3><p>گلو اسکوئید هنگام آسیب دیدن جوهر درخشان آزاد می‌کند.</p></article><article class="fact-card" data-search="موجودات خفاش‌ها خفاش‌ها موجودات تزئینی غیرفعال‌اند و آیتمی نمی‌اندازند."><span class="fact-icon">🦇</span><span class="fact-number">036 / موجودات</span><h3>خفاش‌ها</h3><p>خفاش‌ها موجودات تزئینی غیرفعال‌اند و آیتمی نمی‌اندازند.</p></article><article class="fact-card" data-search="موجودات قورباغه‌ها قورباغه‌ها می‌توانند مکعب‌های کوچک ماگما را بخورند و Froglight تولید کنند."><span class="fact-icon">🐸</span><span class="fact-number">037 / موجودات</span><h3>قورباغه‌ها</h3><p>قورباغه‌ها می‌توانند مکعب‌های کوچک ماگما را بخورند و Froglight تولید کنند.</p></article><article class="fact-card" data-search="موجودات بزها بزها گاهی به موجودات نزدیک خود ضربه می‌زنند."><span class="fact-icon">🐐</span><span class="fact-number">038 / موجودات</span><h3>بزها</h3><p>بزها گاهی به موجودات نزدیک خود ضربه می‌زنند.</p></article><article class="fact-card" data-search="موجودات شترها دو بازیکن می‌توانند هم‌زمان روی یک شتر سوار شوند."><span class="fact-icon">🐪</span><span class="fact-number">039 / موجودات</span><h3>شترها</h3><p>دو بازیکن می‌توانند هم‌زمان روی یک شتر سوار شوند.</p></article><article class="fact-card" data-search="موجودات شتر و کاکتوس شترها می‌توانند از روی کاکتوس‌ها بدون آسیب عبور کنند."><span class="fact-icon">🐫</span><span class="fact-number">040 / موجودات</span><h3>شتر و کاکتوس</h3><p>شترها می‌توانند از روی کاکتوس‌ها بدون آسیب عبور کنند.</p></article><article class="fact-card" data-search="موجودات لاماها لاماها را می‌توان با فرش تزئین کرد."><span class="fact-icon">🦙</span><span class="fact-number">041 / موجودات</span><h3>لاماها</h3><p>لاماها را می‌توان با فرش تزئین کرد.</p></article><article class="fact-card" data-search="موجودات اسب‌ها سرعت و قدرت پرش اسب‌ها در هر اسب می‌تواند متفاوت باشد."><span class="fact-icon">🐴</span><span class="fact-number">042 / موجودات</span><h3>اسب‌ها</h3><p>سرعت و قدرت پرش اسب‌ها در هر اسب می‌تواند متفاوت باشد.</p></article><article class="fact-card" data-search="موجودات خوک‌سواری برای هدایت خوک هنگام سواری به چوب ماهیگیری و هویج نیاز داری."><span class="fact-icon">🐷</span><span class="fact-number">043 / موجودات</span><h3>خوک‌سواری</h3><p>برای هدایت خوک هنگام سواری به چوب ماهیگیری و هویج نیاز داری.</p></article><article class="fact-card" data-search="موجودات رنگ گوسفند گوسفندهای طبیعی می‌توانند پشم رنگی مختلفی داشته باشند."><span class="fact-icon">🐑</span><span class="fact-number">044 / موجودات</span><h3>رنگ گوسفند</h3><p>گوسفندهای طبیعی می‌توانند پشم رنگی مختلفی داشته باشند.</p></article><article class="fact-card" data-search="موجودات گوسفند رنگین‌کمانی نام‌گذاری گوسفند با نام خاص jeb_ باعث تغییر رنگ پشم آن می‌شود."><span class="fact-icon">🌈</span><span class="fact-number">045 / موجودات</span><h3>گوسفند رنگین‌کمانی</h3><p>نام‌گذاری گوسفند با نام خاص jeb_ باعث تغییر رنگ پشم آن می‌شود.</p></article><article class="fact-card" data-search="موجودات تخم مرغ مرغ‌ها هر چند وقت یک‌بار تخم می‌گذارند."><span class="fact-icon">🐔</span><span class="fact-number">046 / موجودات</span><h3>تخم مرغ</h3><p>مرغ‌ها هر چند وقت یک‌بار تخم می‌گذارند.</p></article><article class="fact-card" data-search="غذا کیک کیک را روی زمین قرار می‌دهی و با کلیک‌کردن از آن تکه می‌خوری."><span class="fact-icon">🥚</span><span class="fact-number">047 / غذا</span><h3>کیک</h3><p>کیک را روی زمین قرار می‌دهی و با کلیک‌کردن از آن تکه می‌خوری.</p></article><article class="fact-card" data-search="غذا نان نان با سه واحد گندم در یک ردیف افقی ساخته می‌شود."><span class="fact-icon">🍞</span><span class="fact-number">048 / غذا</span><h3>نان</h3><p>نان با سه واحد گندم در یک ردیف افقی ساخته می‌شود.</p></article><article class="fact-card" data-search="غذا هویج طلایی هویج طلایی یکی از مواد مهم برای ساخت معجون دید در شب است."><span class="fact-icon">🥕</span><span class="fact-number">049 / غذا</span><h3>هویج طلایی</h3><p>هویج طلایی یکی از مواد مهم برای ساخت معجون دید در شب است.</p></article><article class="fact-card" data-search="غذا سیب طلایی سیب طلایی به بازیکن اثرهای مفیدی مثل جذب و بازسازی می‌دهد."><span class="fact-icon">🍎</span><span class="fact-number">050 / غذا</span><h3>سیب طلایی</h3><p>سیب طلایی به بازیکن اثرهای مفیدی مثل جذب و بازسازی می‌دهد.</p></article><article class="fact-card" data-search="غذا سیب‌زمینی سمی خوردن سیب‌زمینی سمی ممکن است اثر مسمومیت ایجاد کند."><span class="fact-icon">🥔</span><span class="fact-number">051 / غذا</span><h3>سیب‌زمینی سمی</h3><p>خوردن سیب‌زمینی سمی ممکن است اثر مسمومیت ایجاد کند.</p></article><article class="fact-card" data-search="ابزارها ماهیگیری با قلاب ماهیگیری علاوه بر ماهی، گاهی آیتم‌های دیگری هم می‌توان گرفت."><span class="fact-icon">🎣</span><span class="fact-number">052 / ابزارها</span><h3>ماهیگیری</h3><p>با قلاب ماهیگیری علاوه بر ماهی، گاهی آیتم‌های دیگری هم می‌توان گرفت.</p></article><article class="fact-card" data-search="ذخیره‌سازی صندوق اندِر محتویات صندوق اندِر بین تمام صندوق‌های اندِر همان بازیکن مشترک است."><span class="fact-icon">📦</span><span class="fact-number">053 / ذخیره‌سازی</span><h3>صندوق اندِر</h3><p>محتویات صندوق اندِر بین تمام صندوق‌های اندِر همان بازیکن مشترک است.</p></article><article class="fact-card" data-search="ذخیره‌سازی صندوق شالکر صندوق شالکر پس از شکستن، محتویاتش را حفظ می‌کند."><span class="fact-icon">📦</span><span class="fact-number">054 / ذخیره‌سازی</span><h3>صندوق شالکر</h3><p>صندوق شالکر پس از شکستن، محتویاتش را حفظ می‌کند.</p></article><article class="fact-card" data-search="ساخت‌وساز چوب و تخته از یک تنه چوب می‌توان چهار تخته چوبی ساخت."><span class="fact-icon">🪵</span><span class="fact-number">055 / ساخت‌وساز</span><h3>چوب و تخته</h3><p>از یک تنه چوب می‌توان چهار تخته چوبی ساخت.</p></article><article class="fact-card" data-search="ساخت‌وساز نردبان نردبان امکان بالا رفتن عمودی از دیوار را فراهم می‌کند."><span class="fact-icon">🪜</span><span class="fact-number">056 / ساخت‌وساز</span><h3>نردبان</h3><p>نردبان امکان بالا رفتن عمودی از دیوار را فراهم می‌کند.</p></article><article class="fact-card" data-search="ساخت‌وساز درهای چوبی درهای چوبی را می‌توان با دست باز و بسته کرد."><span class="fact-icon">🚪</span><span class="fact-number">057 / ساخت‌وساز</span><h3>درهای چوبی</h3><p>درهای چوبی را می‌توان با دست باز و بسته کرد.</p></article><article class="fact-card" data-search="ساخت‌وساز دروازه حصاری دروازه حصاری برای عبور از حصار بدون شکستن آن کاربرد دارد."><span class="fact-icon">🚧</span><span class="fact-number">058 / ساخت‌وساز</span><h3>دروازه حصاری</h3><p>دروازه حصاری برای عبور از حصار بدون شکستن آن کاربرد دارد.</p></article><article class="fact-card" data-search="ساخت‌وساز شیشه شیشه معمولی با ابزار دارای Silk Touch بهتر جمع‌آوری می‌شود."><span class="fact-icon">🪟</span><span class="fact-number">059 / ساخت‌وساز</span><h3>شیشه</h3><p>شیشه معمولی با ابزار دارای Silk Touch بهتر جمع‌آوری می‌شود.</p></article><article class="fact-card" data-search="ساخت‌وساز پشم پشم با چهار نخ ساخته می‌شود."><span class="fact-icon">🧶</span><span class="fact-number">060 / ساخت‌وساز</span><h3>پشم</h3><p>پشم با چهار نخ ساخته می‌شود.</p></article><article class="fact-card" data-search="ابزارها میز ساخت‌وساز میز ساخت‌وساز شبکه ۳ در ۳ برای دستورهای ساخت فراهم می‌کند."><span class="fact-icon">🛠️</span><span class="fact-number">061 / ابزارها</span><h3>میز ساخت‌وساز</h3><p>میز ساخت‌وساز شبکه ۳ در ۳ برای دستورهای ساخت فراهم می‌کند.</p></article><article class="fact-card" data-search="ابزارها کوره کوره برای ذوب سنگ معدن و پخت غذا استفاده می‌شود."><span class="fact-icon">🔥</span><span class="fact-number">062 / ابزارها</span><h3>کوره</h3><p>کوره برای ذوب سنگ معدن و پخت غذا استفاده می‌شود.</p></article><article class="fact-card" data-search="ابزارها دودخانه دودخانه غذا را سریع‌تر از کوره معمولی می‌پزد."><span class="fact-icon">🍖</span><span class="fact-number">063 / ابزارها</span><h3>دودخانه</h3><p>دودخانه غذا را سریع‌تر از کوره معمولی می‌پزد.</p></article><article class="fact-card" data-search="ابزارها کوره ذوب کوره ذوب سنگ معدن و ابزارهای فلزی را سریع‌تر ذوب می‌کند."><span class="fact-icon">⚒️</span><span class="fact-number">064 / ابزارها</span><h3>کوره ذوب</h3><p>کوره ذوب سنگ معدن و ابزارهای فلزی را سریع‌تر ذوب می‌کند.</p></article><article class="fact-card" data-search="افسون‌ها میز افسون میز افسون برای استفاده از تجربه و لاجورد جهت افسون‌کردن ابزارهاست."><span class="fact-icon">📚</span><span class="fact-number">065 / افسون‌ها</span><h3>میز افسون</h3><p>میز افسون برای استفاده از تجربه و لاجورد جهت افسون‌کردن ابزارهاست.</p></article><article class="fact-card" data-search="افسون‌ها کتاب افسون‌شده کتاب افسون‌شده را می‌توان با سندان روی ابزار یا زره استفاده کرد."><span class="fact-icon">📖</span><span class="fact-number">066 / افسون‌ها</span><h3>کتاب افسون‌شده</h3><p>کتاب افسون‌شده را می‌توان با سندان روی ابزار یا زره استفاده کرد.</p></article><article class="fact-card" data-search="ابزارها سندان سندان برای تعمیر، ترکیب و تغییر نام آیتم‌ها کاربرد دارد."><span class="fact-icon">🧰</span><span class="fact-number">067 / ابزارها</span><h3>سندان</h3><p>سندان برای تعمیر، ترکیب و تغییر نام آیتم‌ها کاربرد دارد.</p></article><article class="fact-card" data-search="افسون‌ها جذب آیتم افسون Looting می‌تواند مقدار بعضی آیتم‌های افتاده از موجودات را افزایش دهد."><span class="fact-icon">🧲</span><span class="fact-number">068 / افسون‌ها</span><h3>جذب آیتم</h3><p>افسون Looting می‌تواند مقدار بعضی آیتم‌های افتاده از موجودات را افزایش دهد.</p></article><article class="fact-card" data-search="افسون‌ها Silk Touch با Silk Touch می‌توان بعضی بلوک‌ها را به شکل خودشان برداشت."><span class="fact-icon">⛏️</span><span class="fact-number">069 / افسون‌ها</span><h3>Silk Touch</h3><p>با Silk Touch می‌توان بعضی بلوک‌ها را به شکل خودشان برداشت.</p></article><article class="fact-card" data-search="افسون‌ها Efficiency افسون Efficiency سرعت شکستن بلوک‌ها را افزایش می‌دهد."><span class="fact-icon">💥</span><span class="fact-number">070 / افسون‌ها</span><h3>Efficiency</h3><p>افسون Efficiency سرعت شکستن بلوک‌ها را افزایش می‌دهد.</p></article><article class="fact-card" data-search="افسون‌ها Unbreaking افسون Unbreaking احتمال کم‌شدن دوام آیتم را کاهش می‌دهد."><span class="fact-icon">🛡️</span><span class="fact-number">071 / افسون‌ها</span><h3>Unbreaking</h3><p>افسون Unbreaking احتمال کم‌شدن دوام آیتم را کاهش می‌دهد.</p></article><article class="fact-card" data-search="افسون‌ها Mending افسون Mending از تجربه برای تعمیر آیتم استفاده می‌کند."><span class="fact-icon">🔧</span><span class="fact-number">072 / افسون‌ها</span><h3>Mending</h3><p>افسون Mending از تجربه برای تعمیر آیتم استفاده می‌کند.</p></article><article class="fact-card" data-search="افسون‌ها Aqua Affinity Aqua Affinity سرعت کندن بلوک‌ها زیر آب را بهتر می‌کند."><span class="fact-icon">🌊</span><span class="fact-number">073 / افسون‌ها</span><h3>Aqua Affinity</h3><p>Aqua Affinity سرعت کندن بلوک‌ها زیر آب را بهتر می‌کند.</p></article><article class="fact-card" data-search="افسون‌ها Depth Strider Depth Strider سرعت حرکت در آب را افزایش می‌دهد."><span class="fact-icon">👢</span><span class="fact-number">074 / افسون‌ها</span><h3>Depth Strider</h3><p>Depth Strider سرعت حرکت در آب را افزایش می‌دهد.</p></article><article class="fact-card" data-search="افسون‌ها Frost Walker Frost Walker هنگام راه رفتن روی آب، بلوک‌های یخ موقت ایجاد می‌کند."><span class="fact-icon">🧊</span><span class="fact-number">075 / افسون‌ها</span><h3>Frost Walker</h3><p>Frost Walker هنگام راه رفتن روی آب، بلوک‌های یخ موقت ایجاد می‌کند.</p></article><article class="fact-card" data-search="افسون‌ها Infinity Infinity اجازه می‌دهد با داشتن یک تیر معمولی، کمان تیر نامحدود شلیک کند."><span class="fact-icon">🏹</span><span class="fact-number">076 / افسون‌ها</span><h3>Infinity</h3><p>Infinity اجازه می‌دهد با داشتن یک تیر معمولی، کمان تیر نامحدود شلیک کند.</p></article><article class="fact-card" data-search="افسون‌ها Flame افسون Flame تیرهای کمان را آتشین می‌کند."><span class="fact-icon">🏹</span><span class="fact-number">077 / افسون‌ها</span><h3>Flame</h3><p>افسون Flame تیرهای کمان را آتشین می‌کند.</p></article><article class="fact-card" data-search="افسون‌ها Punch Punch موجودی را که تیر به آن برخورد می‌کند عقب می‌راند."><span class="fact-icon">🎯</span><span class="fact-number">078 / افسون‌ها</span><h3>Punch</h3><p>Punch موجودی را که تیر به آن برخورد می‌کند عقب می‌راند.</p></article><article class="fact-card" data-search="افسون‌ها Sharpness Sharpness آسیب شمشیر و تبر را در مبارزه افزایش می‌دهد."><span class="fact-icon">🗡️</span><span class="fact-number">079 / افسون‌ها</span><h3>Sharpness</h3><p>Sharpness آسیب شمشیر و تبر را در مبارزه افزایش می‌دهد.</p></article><article class="fact-card" data-search="مبارزه سپر سپر می‌تواند بسیاری از حمله‌های روبه‌رو را مسدود کند."><span class="fact-icon">🛡️</span><span class="fact-number">080 / مبارزه</span><h3>سپر</h3><p>سپر می‌تواند بسیاری از حمله‌های روبه‌رو را مسدود کند.</p></article><article class="fact-card" data-search="مبارزه کمان و تیر برای ساخت کمان به سه چوب و سه نخ نیاز است."><span class="fact-icon">🏹</span><span class="fact-number">081 / مبارزه</span><h3>کمان و تیر</h3><p>برای ساخت کمان به سه چوب و سه نخ نیاز است.</p></article><article class="fact-card" data-search="مبارزه تی‌ان‌تی TNT با آتش یا ردستون فعال می‌شود و منفجر می‌گردد."><span class="fact-icon">🧨</span><span class="fact-number">082 / مبارزه</span><h3>تی‌ان‌تی</h3><p>TNT با آتش یا ردستون فعال می‌شود و منفجر می‌گردد.</p></article><article class="fact-card" data-search="ردستون ردستون ردستون برای ساخت مدارها و ماشین‌های خودکار استفاده می‌شود."><span class="fact-icon">🧱</span><span class="fact-number">083 / ردستون</span><h3>ردستون</h3><p>ردستون برای ساخت مدارها و ماشین‌های خودکار استفاده می‌شود.</p></article><article class="fact-card" data-search="ردستون مشعل ردستون مشعل ردستون یک منبع سیگنال ردستون است."><span class="fact-icon">🔴</span><span class="fact-number">084 / ردستون</span><h3>مشعل ردستون</h3><p>مشعل ردستون یک منبع سیگنال ردستون است.</p></article><article class="fact-card" data-search="ردستون زنگ روستا زنگ روستا با ضربه یا سیگنال ردستون به صدا درمی‌آید."><span class="fact-icon">🔔</span><span class="fact-number">085 / ردستون</span><h3>زنگ روستا</h3><p>زنگ روستا با ضربه یا سیگنال ردستون به صدا درمی‌آید.</p></article><article class="fact-card" data-search="روستایی‌ها شغل روستایی بلوک‌های شغلی می‌توانند حرفه روستایی‌های بیکار را تعیین کنند."><span class="fact-icon">🧑‍🌾</span><span class="fact-number">086 / روستایی‌ها</span><h3>شغل روستایی</h3><p>بلوک‌های شغلی می‌توانند حرفه روستایی‌های بیکار را تعیین کنند.</p></article><article class="fact-card" data-search="روستایی‌ها کتابدار کتابدار می‌تواند کتاب‌های افسون‌شده معامله کند."><span class="fact-icon">📗</span><span class="fact-number">087 / روستایی‌ها</span><h3>کتابدار</h3><p>کتابدار می‌تواند کتاب‌های افسون‌شده معامله کند.</p></article><article class="fact-card" data-search="روستایی‌ها درمان زامبی روستایی با افکت ضعف و سیب طلایی می‌توان زامبی روستایی را درمان کرد."><span class="fact-icon">🧟</span><span class="fact-number">088 / روستایی‌ها</span><h3>درمان زامبی روستایی</h3><p>با افکت ضعف و سیب طلایی می‌توان زامبی روستایی را درمان کرد.</p></article><article class="fact-card" data-search="روستایی‌ها معامله با روستایی معامله با روستایی‌ها می‌تواند سطح حرفه آن‌ها را افزایش دهد."><span class="fact-icon">🛎️</span><span class="fact-number">089 / روستایی‌ها</span><h3>معامله با روستایی</h3><p>معامله با روستایی‌ها می‌تواند سطح حرفه آن‌ها را افزایش دهد.</p></article><article class="fact-card" data-search="روستایی‌ها زنگ روستا روستایی‌ها هنگام خطر ممکن است برای پناه گرفتن به خانه‌ها بروند."><span class="fact-icon">🏘️</span><span class="fact-number">090 / روستایی‌ها</span><h3>زنگ روستا</h3><p>روستایی‌ها هنگام خطر ممکن است برای پناه گرفتن به خانه‌ها بروند.</p></article><article class="fact-card" data-search="جهان نقشه نقشه محدوده‌ای از جهان را نمایش می‌دهد و با کاوش کامل‌تر می‌شود."><span class="fact-icon">🗺️</span><span class="fact-number">091 / جهان</span><h3>نقشه</h3><p>نقشه محدوده‌ای از جهان را نمایش می‌دهد و با کاوش کامل‌تر می‌شود.</p></article><article class="fact-card" data-search="جهان مختصات با فعال‌کردن نمایش مختصات می‌توان موقعیت X و Y و Z را دید."><span class="fact-icon">🧱</span><span class="fact-number">092 / جهان</span><h3>مختصات</h3><p>با فعال‌کردن نمایش مختصات می‌توان موقعیت X و Y و Z را دید.</p></article><article class="fact-card" data-search="جهان جوانه درخت نهال درخت با گذشت زمان و شرایط مناسب رشد می‌کند."><span class="fact-icon">🌱</span><span class="fact-number">093 / جهان</span><h3>جوانه درخت</h3><p>نهال درخت با گذشت زمان و شرایط مناسب رشد می‌کند.</p></article><article class="fact-card" data-search="جهان باران باران می‌تواند آتش‌های معمولی روی زمین را خاموش کند."><span class="fact-icon">🌧️</span><span class="fact-number">094 / جهان</span><h3>باران</h3><p>باران می‌تواند آتش‌های معمولی روی زمین را خاموش کند.</p></article><article class="fact-card" data-search="جهان برف در زیست‌بوم‌های سرد، بارش می‌تواند به شکل برف باشد."><span class="fact-icon">❄️</span><span class="fact-number">095 / جهان</span><h3>برف</h3><p>در زیست‌بوم‌های سرد، بارش می‌تواند به شکل برف باشد.</p></article><article class="fact-card" data-search="جهان کاکتوس کاکتوس به موجودات و بازیکنی که با آن تماس داشته باشند آسیب می‌زند."><span class="fact-icon">🌵</span><span class="fact-number">096 / جهان</span><h3>کاکتوس</h3><p>کاکتوس به موجودات و بازیکنی که با آن تماس داشته باشند آسیب می‌زند.</p></article><article class="fact-card" data-search="جهان قارچ‌ها قارچ‌ها در نور کم بهتر رشد می‌کنند و برای بعضی غذاها کاربرد دارند."><span class="fact-icon">🍄</span><span class="fact-number">097 / جهان</span><h3>قارچ‌ها</h3><p>قارچ‌ها در نور کم بهتر رشد می‌کنند و برای بعضی غذاها کاربرد دارند.</p></article><article class="fact-card" data-search="کشاورزی گندم برای رشد گندم باید بذر را روی زمین کشاورزی بکاری."><span class="fact-icon">🌾</span><span class="fact-number">098 / کشاورزی</span><h3>گندم</h3><p>برای رشد گندم باید بذر را روی زمین کشاورزی بکاری.</p></article><article class="fact-card" data-search="کشاورزی کمپوستر کمپوستر از بعضی مواد گیاهی پودر استخوان تولید می‌کند."><span class="fact-icon">🧑‍🌾</span><span class="fact-number">099 / کشاورزی</span><h3>کمپوستر</h3><p>کمپوستر از بعضی مواد گیاهی پودر استخوان تولید می‌کند.</p></article><article class="fact-card" data-search="کشاورزی پودر استخوان پودر استخوان رشد بسیاری از گیاهان و محصولات کشاورزی را سریع می‌کند."><span class="fact-icon">🦴</span><span class="fact-number">100 / کشاورزی</span><h3>پودر استخوان</h3><p>پودر استخوان رشد بسیاری از گیاهان و محصولات کشاورزی را سریع می‌کند.</p></article>
-      </div>
-      <p class="note">۱۰۰ دانستنی درباره موجودات، ابزارها، افسون‌ها، ردستون، روستایی‌ها و دنیای ماینکرفت. بعضی جزئیات ممکن است با نسخه یا Edition بازی تفاوت داشته باشند.</p>
-    </section>
+  <section class="hero">
+    <div class="wrap">
+      <span class="tag">⛏️ وب‌سایت رسمی جواد کرفت</span>
 
-    <section class="section links-section" id="links">
-      <div class="section-heading"><span class="section-kicker">FIND ME ONLINE</span><h2>راه‌های <span>ارتباط با من</span></h2></div>
-      <div class="link-grid">
-        <a class="link-card" href="https://www.aparat.com/U27624180" target="_blank" rel="noopener"><span>▶️</span><div><b>کانال آپارات جواد کرفت</b><small>تماشای ویدیوهای من در آپارات</small></div><i>↗</i></a>
-        <a class="link-card" href="#" target="_blank" rel="noopener"><span>📸</span><div><b>شبکه اجتماعی</b><small>لینک صفحه‌ات را اینجا قرار می‌دهیم</small></div><i>↗</i></a>
-        <a class="link-card" href="#" target="_blank" rel="noopener"><span>💬</span><div><b>ارتباط با من</b><small>راه ارتباطی دلخواهت</small></div><i>↗</i></a>
+      <h1>به دنیای <span>جواد کرفت</span> خوش آمدی!</h1>
+
+      <p>
+        اینجا دنیای ماینکرفت، ساخت‌وساز، ماجراجویی و سرگرمی است.
+        با من همراه شو تا ۱۰۰ دانستنی جالب Minecraft را کشف کنیم!
+      </p>
+
+      <div class="buttons">
+        <a class="btn" href="#facts">مشاهده ۱۰۰ دانستنی</a>
+        <a class="btn secondary" href="#social">شبکه‌های اجتماعی من</a>
       </div>
-      <p class="note">کانال آپارات جواد کرفت؛ بقیه لینک‌ها را بعداً اضافه می‌کنیم.</p>
-    </section>
-  </main>
+    </div>
+  </section>
 
-  <footer>
-    <a class="brand footer-brand" href="#home"><span class="brand-mark">JC</span><span>JAVAD <b>CRAFT</b></span></a>
-    <p>ساخته‌شده با عشق به دنیای ماینکرفت 💙</p>
-    <span class="copyright">© 2026 JAVAD CRAFT</span>
-  </footer>
+  <section id="about">
+    <div class="wrap">
+      <h2 class="section-title">👋 درباره جواد کرفت</h2>
+      <p class="section-sub">با سازنده این دنیای کوچک آشنا شو!</p>
 
-  <script>
-    const factSearch = document.getElementById("factSearch");
-    const factCards = Array.from(document.querySelectorAll(".fact-card"));
-    const factCount = document.getElementById("factCount");
-    factSearch.addEventListener("input", () => {
-      const term = factSearch.value.trim().toLocaleLowerCase("fa");
-      let visible = 0;
-      factCards.forEach(card => {
-        const match = card.dataset.search.toLocaleLowerCase("fa").includes(term);
-        card.hidden = !match;
-        if (match) visible++;
-      });
-      factCount.textContent = `نمایش ${visible} دانستنی از ۱۰۰`;
-    });
-  </script>
+      <div class="about-box">
+        <h3>سلام! من جوادم 💚</h3>
+        <p>
+          به سایت Javad Craft خوش اومدی!
+          من عاشق دنیای بازی‌ها و مخصوصاً ماینکرفت هستم.
+          اینجا مطالب جالب، دانستنی‌ها و ماجراجویی‌های ماینکرفتی
+          رو با شما به اشتراک می‌ذارم.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="facts">
+    <div class="wrap">
+      <h2 class="section-title">💎 ۱۰۰ دانستنی ماینکرفت</h2>
+      <p class="section-sub">
+        صد حقیقت جالب درباره بازی Minecraft به زبان فارسی
+      </p>
+
+      <input
+        class="search"
+        id="factSearch"
+        type="search"
+        placeholder="جست‌وجو بین دانستنی‌ها..."
+        aria-label="جست‌وجو بین دانستنی‌های ماینکرفت"
+      >
+
+      <div class="facts-grid" id="factsList"></div>
+      <p id="noResult" hidden>چیزی پیدا نشد!</p>
+    </div>
+  </section>
+
+  <section id="social">
+    <div class="wrap">
+      <h2 class="section-title">📲 شبکه‌های اجتماعی من</h2>
+      <p class="section-sub">ویدیوها و مطالب جدید Javad Craft را دنبال کن.</p>
+
+      <div class="socials">
+
+        <a class="social"
+           href="https://www.aparat.com/U27624180"
+           target="_blank" rel="noopener">
+          <strong>🎬 آپارات</strong>
+          <span>ویدیوهای جواد کرفت</span>
+        </a>
+
+        <a class="social"
+           href="https://www.youtube.com/channel/UC-4Up9qK4zZUSlypIcluf1g"
+           target="_blank" rel="noopener">
+          <strong>▶️ یوتیوب</strong>
+          <span>کانال Javad Craft</span>
+        </a>
+
+        <a class="social"
+           href="https://rubika.ir/JavadcraftR"
+           target="_blank" rel="noopener">
+          <strong>💜 روبیکا</strong>
+          <span>@JavadcraftR</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  ساخته‌شده با 💚 برای Javad Craft
+  <br>
+  © 2026 Javad Craft
+</footer>
+
+<script>
+const facts = [
+"ماینکرفت در سال ۲۰۰۹ برای اولین بار منتشر شد.",
+"سازنده اولیه ماینکرفت مارکوس پرسون است.",
+"نام مستعار مارکوس پرسون Notch است.",
+"ماینکرفت در سال ۲۰۱۱ به‌صورت رسمی منتشر شد.",
+"ماینکرفت را می‌توان در حالت تک‌نفره بازی کرد.",
+"کریپر یکی از معروف‌ترین موجودات ماینکرفت است.",
+"کریپر از گربه‌ها می‌ترسد.",
+"انفجار کریپر می‌تواند به بازیکن و محیط آسیب بزند.",
+"اندرمن می‌تواند بلوک‌های مشخصی را جابه‌جا کند.",
+"اندرمن وقتی به چشم‌هایش نگاه کنی معمولاً عصبانی می‌شود.",
+"اندر دراگون رئیس اصلی دنیای End است.",
+"برای رفتن به End باید پورتال End را فعال کنی.",
+"اندر پرل برای جابه‌جایی سریع استفاده می‌شود.",
+"بلِیز در Nether پیدا می‌شود.",
+"بلِیز راد برای ساخت پودر بلِیز استفاده می‌شود.",
+"گاست در Nether پرواز می‌کند.",
+"گاست گلوله‌های آتشین پرتاب می‌کند.",
+"پیگلین‌ها در Nether زندگی می‌کنند.",
+"پیگلین‌ها به شمش طلا علاقه دارند.",
+"پیگلین‌ها از زره طلایی خوششان می‌آید.",
+"ویتر یک باس قدرتمند در ماینکرفت است.",
+"برای ساخت ویتر به Soul Sand یا Soul Soil و سه سر ویتر اسکلت نیاز داری.",
+"ویتر اسکلت‌ها در قلعه‌های Nether پیدا می‌شوند.",
+"استخوان برای ساخت Bone Meal استفاده می‌شود.",
+"Bone Meal رشد بعضی گیاهان را سریع‌تر می‌کند.",
+"گندم را می‌توان با بذر گندم کاشت.",
+"گاوها شیر و گوشت می‌دهند.",
+"گوسفندها پشم تولید می‌کنند.",
+"رنگ پشم گوسفند را می‌توان تغییر داد.",
+"خوک‌ها با هویج، سیب‌زمینی یا چغندر جذب می‌شوند.",
+"اسب‌ها را می‌توان رام کرد.",
+"اسب زین‌دار برای سواری مناسب است.",
+"قاطرها می‌توانند صندوق حمل کنند.",
+"گرگ‌ها را می‌توان با استخوان رام کرد.",
+"گربه‌ها با ماهی خام رام می‌شوند.",
+"گربه‌ها کریپرها را دور نگه می‌دارند.",
+"زنبورها به گل‌ها علاقه دارند.",
+"زنبورها می‌توانند عسل تولید کنند.",
+"برای جمع‌آوری عسل بدون عصبانی کردن زنبورها از دود آتش کمپ استفاده کن.",
+"لاک‌پشت‌ها تخم می‌گذارند.",
+"تخم لاک‌پشت روی شن قرار می‌گیرد.",
+"دلفین‌ها در اقیانوس زندگی می‌کنند.",
+"پانداها در جنگل بامبو پیدا می‌شوند.",
+"روباه‌ها می‌توانند بعضی وسایل را در دهان نگه دارند.",
+"آکسولاتل‌ها در آب زندگی می‌کنند.",
+"قورباغه‌ها می‌توانند اسلایم‌های کوچک را بخورند.",
+"شمع‌ها را می‌توان با رنگ‌های مختلف ساخت.",
+"مشعل برای روشن کردن محیط استفاده می‌شود.",
+"ردستون برای ساخت مدارهای مکانیکی کاربرد دارد.",
+"پیستون می‌تواند بلوک‌ها را هل بدهد.",
+"پیستون چسبنده می‌تواند بلوک‌ها را بکشد.",
+"اهرم برای روشن و خاموش کردن مدارها استفاده می‌شود.",
+"کامپراتور ردستونی می‌تواند سیگنال‌ها را مقایسه کند.",
+"هاپر می‌تواند آیتم‌ها را جابه‌جا کند.",
+"دراپر آیتم‌ها را بیرون می‌اندازد.",
+"دیسپنسر می‌تواند بعضی آیتم‌ها را استفاده یا پرتاب کند.",
+"ریل برای ساخت مسیر ماین‌کارت کاربرد دارد.",
+"ماین‌کارت روی ریل حرکت می‌کند.",
+"ریل برقی می‌تواند ماین‌کارت را سریع‌تر کند.",
+"قایق برای حرکت روی آب استفاده می‌شود.",
+"قایق را می‌توان با صندوق ترکیب کرد.",
+"تخت نقطه بازگشت بازیکن را تعیین می‌کند.",
+"خوابیدن در تخت می‌تواند شب را رد کند.",
+"تخت در Nether و End منفجر می‌شود.",
+"کوره برای پخت غذا و ذوب مواد استفاده می‌شود.",
+"کوره ذوب‌کننده سریع‌تر از کوره معمولی است.",
+"دودکش یا Smoker برای پخت غذا کاربرد دارد.",
+"Anvil برای تعمیر و ترکیب ابزارها استفاده می‌شود.",
+"میز افسون برای جادویی کردن ابزارهاست.",
+"لاپیس لازولی برای افسون کردن لازم است.",
+"کتابخانه‌ها قدرت میز افسون را افزایش می‌دهند.",
+"افسون Fortune می‌تواند مقدار بعضی منابع را بیشتر کند.",
+"افسون Silk Touch بلوک را به شکل خودش استخراج می‌کند.",
+"افسون Unbreaking دوام وسیله را افزایش می‌دهد.",
+"افسون Mending با تجربه وسیله را تعمیر می‌کند.",
+"زره الماسی از زره آهنی قوی‌تر است.",
+"زره ندرایت از زره الماسی مقاوم‌تر است.",
+"الماس از منابع ارزشمند بازی است.",
+"استخراج الماس به کلنگ مناسب نیاز دارد.",
+"سنگ سرخ برای ساخت مدارهای ردستونی استفاده می‌شود.",
+"زمرد برای معامله با روستایی‌ها کاربرد دارد.",
+"روستایی‌ها شغل‌های مختلفی دارند.",
+"روستایی کتابدار می‌تواند کتاب‌های افسون‌شده بفروشد.",
+"آهنگرها ابزار و زره معامله می‌کنند.",
+"روستایی‌ها شب‌ها به خانه‌هایشان برمی‌گردند.",
+"آیرون گالم از روستایی‌ها محافظت می‌کند.",
+"آیرون گالم می‌تواند به دشمنان حمله کند.",
+"زیر آب بدون وسیله مناسب نفس کشیدن محدود است.",
+"معجون Water Breathing امکان نفس کشیدن زیر آب را می‌دهد.",
+"معجون Night Vision دید در تاریکی را بهتر می‌کند.",
+"معجون سرعت حرکت را افزایش می‌دهد.",
+"معجون قدرت آسیب حمله را بیشتر می‌کند.",
+"شیلد می‌تواند جلوی بعضی حمله‌ها را بگیرد.",
+"کمان برای حمله از فاصله دور استفاده می‌شود.",
+"تیرها را می‌توان با کمان پرتاب کرد.",
+"کراسبو با کمان تفاوت دارد و می‌تواند آتش‌بازی هم پرتاب کند.",
+"تیرهای آتشین به هدف آتش می‌زنند.",
+"قطب‌نما معمولاً جهت نقطه شروع جهان را نشان می‌دهد.",
+"نقشه برای پیدا کردن مسیرها و مکان‌ها کاربرد دارد.",
+"توتِم نامیرایی می‌تواند بازیکن را از مرگ نجات دهد.",
+"شالکرها در شهرهای End پیدا می‌شوند.",
+"شالکر با گلوله‌هایش بازیکن را به هوا می‌برد.",
+"الایترا برای پرواز و سر خوردن در هوا استفاده می‌شود.",
+"آتش‌بازی می‌تواند به پرواز با الایترا کمک کند."
+];
+
+const list = document.getElementById("factsList");
+const search = document.getElementById("factSearch");
+const noResult = document.getElementById("noResult");
+
+function showFacts(query = "") {
+  list.innerHTML = "";
+
+  const filtered = facts
+    .map((fact, index) => ({ fact, index }))
+    .filter(item => item.fact.includes(query.trim()));
+
+  filtered.forEach(item => {
+    const card = document.createElement("article");
+    card.className = "fact";
+
+    const number = document.createElement("span");
+    number.className = "fact-number";
+    number.textContent = item.index + 1 + ".";
+
+    const paragraph = document.createElement("p");
+    paragraph.textContent = item.fact;
+
+    card.append(number, paragraph);
+    list.appendChild(card);
+  });
+
+  noResult.hidden = filtered.length !== 0;
+}
+
+search.addEventListener("input", () => showFacts(search.value));
+
+showFacts();
+</script>
 
 </body>
 </html>
